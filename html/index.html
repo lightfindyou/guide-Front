@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Rio Nav</title>
+<!-- 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	 <meta charset="UTF-8">
+        <meta content="width=device-width, height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <title></title>   
+        <style type="text/css">
+			body {
+				margin:0;
+				padding:0;
+				overflow: hidden;
+			}
+			.content {
+				width: 100%;
+				height: 100%;
+				top:0;
+				z-index: 99;
+				position: absolute;
+				background-color: #ecf0f1;
+				display: table;
+				text-align: center;
+			}
+
+			.wait{
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.wait img{
+				width: 100%;
+			}	
+	</style>
+</head>
+
+<body>
+<button class="button">清除</button>
+<div class="content">
+      <div class="wait"><img src="../images/wait2.gif"> </div>     
+</div>
+<!-- <div id="wait"><img src="wait.gif"></div> -->
+    <!-- <div id="content" class="content">
+      <div class="top"><img src="users.png" class="users"><input type="text" name="place" id="place" value="搜地点、找路线" /></div> 
+      <div class="adaptive-circle">
+        <div class="layout middle">
+             <img src="arrow.png">
+        </div>
+      </div>
+      <div class="bottom">
+        <img src="navigation1.png"><br><br>
+        <span>路线</span>
+      </div>
+    </div> -->
+	<!-- <ul id="values">
+		<li>Press
+			<pre>left</pre> and
+			<pre>right</pre> to change camera left/right. (X)</li>
+		<li>Press
+			<pre>up</pre> and
+			<pre>down</pre> to change camera up/down. (Y)</li>
+		<li>Press
+			<pre>up</pre> and
+			<pre>down</pre> with
+			<pre>shift</pre> to change camera forward/backward. (Z)</li>
+	</ul> -->
+	
+	<script src="../js/three.js"></script>
+	<script src="../js/script.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="../js/wxconfig.js"></script>
+    <script type="text/JavaScript" src="../js/jquery-2.1.1.min.js"> </script>
+	<script type="text/javascript">
+	// window.onload=function(){
+	//     var LocX=new Number();
+ //        var LocY=new Number();
+ //        var TargetX=new Number();
+ //        var TargetY=new Number();
+	//     var request = new Object();
+	//     request = GetRequest();
+	//     LocX=request['LocX'];
+	//     LocY=request['LocY'];
+	//     GpsLocX=request['TargetX'];
+	//     GpsLocY=request['TargetY'];
+	//     function GetRequest() {  
+	//       var url = location.search; //获取url中"?"符后的字串  
+	//       url=decodeURI(url);
+	//       var theRequest = new Object();   
+	//       if (url.indexOf("?") != -1) {   
+	//       var str = url.substr(1);   
+	//       strs = str.split("&");   
+	//       for(var i = 0; i < strs.length; i ++) {   
+	//        theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);   
+	//     }   
+	//     }   
+	//     return theRequest;   
+	//     }  	
+ //   }
+	</script>
+
+</body>
+
+</html>

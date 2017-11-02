@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <title></title>   
+        <link rel="stylesheet" href="../css/chooseRoom4.css">
+        <style type="text/css">
+        </style>      
+    </head>
+    <body>
+    <div class="content">
+      <div class="top"><img src="../images/return.png"/><span class="dormitory">我的宿舍</span></div> 
+      <div class="body">
+	      <div class="center">
+		      <span class="title">申请时间</span>
+		      <input type="text" name=""  class="time1" id="time1" />
+	      </div>
+        <div class="center">
+          <span class="title">入住时间</span>
+          <input type="text" name="" class="time2" id="time2" />
+          <span class="right1">修改</span>
+        </div>
+	      <div class="center">
+		      <span class="title">房型</span>
+		      <input type="text" name="" class="room" id="room" />
+		      <span class="right2">修改</span>
+	      </div>
+	      <div class="center">
+		      <span class="title">状态</span>
+		      <input type="text" name="" value="等待比准" class="state" />
+	      </div>
+     </div>
+    </div>
+    </body>
+     <script type="text/JavaScript" src="../js/jquery-2.1.1.min.js"> </script>
+    <script type="text/javascript">
+    var request = new Object();
+    request = GetRequest();
+    var roomType=request['roomType'];
+    var time2=request['time'];
+    var applyDate=request['applyDate'];
+    roomType=decodeURI(roomType);
+    function GetRequest() {   
+      var url = location.search; //获取url中"?"符后的字串 
+      url=decodeURI(url);//中文参数解码
+      var theRequest = new Object();   
+      if (url.indexOf("?") != -1) {   
+      var str = url.substr(1);   
+      strs = str.split("&");   
+      for(var i = 0; i < strs.length; i ++) {   
+       theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);   
+    }   
+    }   
+    return theRequest;   
+    }  
+    $(".right1").click(function(){
+        window.location.href="time.html";
+      })
+    $(".right2").click(function(){
+      window.location.href="chooseRoom1.html";
+    })
+    console.log(roomType);
+    document.getElementById("time2").value=time2;
+    document.getElementById("room").value=roomType;
+    // var myDate = new Date();
+    // var year=myDate.getFullYear();    
+    // var month=myDate.getMonth();       
+    // var day=myDate.getDate(); 
+    // var time1=year+"."+month+"."+day;
+    document.getElementById("time1").value=applyDate;
+
+    
+ 
+   
+    </script>
+</html>

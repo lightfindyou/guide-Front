@@ -1,0 +1,189 @@
+html{font-size:62.5%}
+body {
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    background-color:#eeeeee;
+}
+.top{
+    width: 100%;
+    height: 3.75%;
+    color:#64779f;
+    position: absolute;
+    top:4.5%;
+}
+.person{
+    font-family: 微软雅黑;
+    position: absolute;
+    left:14.67%;
+}
+.quit{
+    font-family: 微软雅黑;
+    position: absolute;
+    right:14.67%;
+    top:20%;
+}
+.edit{
+    font-family: 微软雅黑;
+    position: absolute;
+    right:32%;
+    top:20%;
+}
+.top img{
+    position: absolute;
+    top:15%;
+    left:6.7%;
+    display: inline;
+}
+/*.mid{
+    width: 100%;
+    height: 13%;
+    position: relative;margin-top:14%;
+    display: table;
+}
+#head{
+    padding-left: 9%;
+    display: table-cell;
+    vertical-align: middle;
+}
+#name{
+    color:#f6b37f;
+    font-family: 微软雅黑;
+    padding-left: 6.5%;
+    display: table-cell;
+    vertical-align: middle;
+}*/
+#body{
+    width: 100%;
+    position: absolute;
+    top:14%;
+   /* position: relative;  */ 
+}
+.form{
+    width: 98%;
+    margin:0.5% 1%;
+    background-color: #FFF;
+    display: table;
+}
+.left,.right,.change,.eye{
+    color:#64779f;
+    font-family: 微软雅黑;
+}
+.eye1{
+    color:green;
+    font-family: 微软雅黑;
+}
+.left{
+    padding-left:12%;
+    position: absolute;
+    left: 2%;
+}
+.right{
+    width: 50%;
+    position: absolute;
+    right: 14%;
+    text-align: right;
+   border:none;
+   background-color: #FFF;
+   }
+#phone{
+    margin-right: 0;
+    padding-right: 0;
+}
+.change,.eye,.eye1{
+    width: 12%;
+    padding-right:2%;
+    text-align: right;
+    position: absolute;
+    right: 2%;
+}
+@media (max-height:1000px){
+.person{
+    font-size: 2rem;
+}
+.quit,.edit{
+     font-size: 1.5rem;
+}
+.top img{
+    /*height: 2rem;*/
+    width: 2rem;
+}
+#head{
+    width: 5.3rem;
+    height: 5.3rem;
+}
+#head img{
+    width: 5.3rem;
+    height: 5.3rem;
+}
+.form{
+    height:5.5rem;
+}
+.left,.right,.change,.eye,.eye1{
+    font-size: 1.25rem;
+    margin-top:1.875rem;
+}
+}
+@media (min-height:1000px) {
+.person{
+    font-size: 4rem;
+}
+.quit,.edit{
+     font-size: 3rem;
+}
+.top img{
+    /*height: 2rem;*/
+    width: 4rem;
+}
+#head{
+    width: 10.7rem;
+    height: 10.7rem;
+}
+#head img{
+    width: 10.7rem;
+    height: 10.7rem;
+}
+.form{
+    height:8.4rem;
+}
+.left,.right,.change,.eye,.eye1{
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
+}
+}
+
+@media (min-height:1300px){
+.person{
+    font-size: 5.46rem;
+}
+.quit,.edit{
+     font-size: 4.5rem;
+}
+.top img{
+    height: 5.46rem;
+    width: 5.46rem;
+}
+#head{
+    width: 10.7rem;
+    height: 10.7rem;
+}
+#head img{
+    width: 10.7rem;
+    height: 10.7rem;
+}
+.form{
+    height:11rem;
+}
+.left,.right,.change,.eye,.eye1{
+    font-size: 2.5rem;
+    margin-top: 4.5rem;
+}
+}

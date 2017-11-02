@@ -1,0 +1,95 @@
+﻿  <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <title></title>   
+        <link rel="stylesheet" href="../css/register.css">
+        <style type="text/css">
+
+        </style>      
+    </head>
+   <!--  <script>
+        //为了扩展性，将创建查询字符串中所有的键值对的全局对象
+        var hremf = location.hremf;
+        var str = "";
+        //键值对数组
+        var strs = hremf.substring(hremf.indexOf("?") + 1).split("&");
+        for (var i = 0; i < strs.length; i++) {
+            var strT = strs[i].split("=");
+            str = str + "var " + strT[0] + "=\'" + strT[1] + "\';";
+        }
+        eval(str);
+
+        $("body").hide();
+        $.ajax({
+            url: "",//填入接口的url
+            data: { token: t },//token在url中的键是t
+            type: "GET",
+            success: function (data) {
+                if (data == "true") {
+                    alert("微信自动登录失败！");
+                    location.hremf = "homepage.html";//验证成功（微信登录）则跳转到主页
+                }
+                $("body").show();//验证失败，直接显示登录页面
+            }
+        });
+    </script> -->
+    <body >
+        <div class="content">
+        <div class="top"><span class="register1">用户登陆</span><br><span class="register2">LANDING</span></div> 
+        <div class="register">
+                <form>
+                    <!-- <div class="form-group">
+                        <div class="left">
+                            <img src="../images/user.png">
+                            <input type="text" id="name" value="姓名">
+                        </div>              
+                        <div class="right">                 
+                            <img class="corremct" src="http://ouvmwxzlc.bkt.clouddn.com/right.png">
+                            <img class="wrong" src="../images/wrong.png"> 
+                        </div>
+                        <div class="clear"></div>
+                    </div> -->
+                    <div class="form-group">
+                        <div class="left">
+                            <img src="../images/smartphone.png">
+                            <input type="text" id="telephone" value="手机号">
+                        </div>              
+                        <div class="right"> 
+                            <!-- <img class="corremct" src="../images/right.png"> -->
+                           <!--  <img class="wrong" src="../images/wrong.png"> -->
+                        </div>
+                        <div class="clear"></div>
+                    </div>  
+                   <div class="form-group">
+                        <div class="left">
+                             <img src="../images/lock.png"> 
+                            <input type="text" id="pwd" class="code" value="密码">  
+                        </div>      
+                        <div class="clear"></div>                       
+                    </div>   
+                    <div class="form-group">
+                        <div class="left" id="finish">
+                           <button type="button"  class="btn btn-primary finish">完成</button>  
+                           <!-- <input type="button" name="" value="完成"  class="btn btn-primary finish">    -->
+                        </div>      
+                        <div class="clear"></div>                       
+                    </div>  
+                    <div class="form-group">
+                        <div class="clickRegister"><a href="register.html" style="position: absolute;left:16.8%">点我注册</a><a href="findPassword1.html" style="position: absolute;right: 16%">找回密码</a></div>   
+                        <div class="clear"></div>                       
+                    </div>                                         
+                </form>
+        </div> 
+       
+        </div>  
+    </body>
+    <script type="text/JavaScript" src="../js/jquery-2.1.1.min.js"> </script>
+    <script type="text/JavaScript" src="../js/globalVariable.js"> </script>
+    <script type="text/JavaScript" src="../js/landing.js"> </script>
+    <script type="text/javascript">
+      
+
+    </script>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Demo Page</title>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="Scripts/wxconfig.js"></script>
+</head>
+
+<body>
+    <input type="button" value="获取地理位置" id="getlocation" />
+    <div id="content"></div>
+    <script>
+        $("#getlocation").click(function () {
+            wx.getLocation({
+                success: function (res) {
+                    var lattitude = res.latitude; // 纬度
+                    var longitude = res.longitude; // 经度
+                    var speed = res.speed; // 速度，以米/每秒计
+                    var accuracy = res.accuracy; // 位置精度
+                    $("#content").append(lattitude + ',' + longitude + ',' + speed + ',' + accuracy +
+                        "<br/>");
+                }
+            });         
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/time.css">
+    <title></title>
+    <style>
+    </style>
+  </head>
+  <body>
+   <div class="content">
+      <div class="top"><img  src="../images/return.png"><span>申请时间</span></div>    
+          <div class="bodyTop">
+          <span id="month" style="margin-right: 30px;"></span><span>.</span><span id="year" style="margin-left: 30px;"></span>
+          </div>
+      <div id = 'calendar'>
+      </div>
+      <div class="bottom">
+        <img src="../images/star.png" class="star">
+        <span id ="num">您所选的日期是</span>
+      </div>
+      <div>     
+          <button type="button"  class="btn btn-primary finish">确定</button>          
+      </div>      
+    </div>
+    <script type="text/javascript" src="../js/time.js"></script>  
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script>
+       var myCalendar = new SimpleCalendar('#calendar');
+       var time;
+       $(".sc-select-year").attr("disabled","disabled");
+       $(".sc-select-month").attr("disabled","disabled");
+       $(".sc-item").click(function(){
+         $(this).css("color","#FFF");
+         $(this).parent().siblings().find("td").css("background-color","");
+         $(this).css("background-color","#64779f").siblings().css({"background-color":"","color":"#64779f"});
+          var day=$(this).find(".day").html();
+          console.log(day);
+          var year=$(".sc-select-year").val();
+          console.log(year);
+          var month=$(".sc-select-month").val();
+          console.log(month);
+          document.getElementById('num').innerHTML="您所选的日期是"+month+"月"+day+"号";
+          time=year+"."+month+"."+day;
+
+       });
+       $(".finish").click(function(){
+        window.location.href='chooseRoom1.html#'+time;
+       })
+    </script>
+
+  </body>
+</html>

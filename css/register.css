@@ -1,0 +1,227 @@
+html{font-size:62.5%}
+body {
+    font-size:1.2rem;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /*top:0;
+    position: absolute;
+    background-color:#eeeeee;*/
+    
+}
+.top{
+    width: 100%;
+    color:#022a5b;
+    /*position: absolute;*/
+    padding-top:10%;
+    text-align: center;
+}
+.register1,.consummate1{
+    font-family: 微软雅黑;
+}
+.register2,.consummate2{
+    font-family: Calibri;
+    font-style: italic;
+}
+/*完善信息*/
+.consummate3{
+    font-family: 微软雅黑;
+}
+.consummate4{
+    font-family: Calibri;
+    font-style: italic;
+}
+.register,.consummate{
+    width: 76%;
+    /*position: absolute;*/
+    padding-top:15%;
+    padding-left:16.8%;
+}
+.perfect{
+    width: 76%;
+    /*position: absolute;*/
+    padding-top:8%;
+    padding-left:16.8%;
+}
+.form-group{
+    width:100%;
+    margin-bottom: 8%;
+}
+.perfect .form-group{
+    width:100%;
+    margin-bottom: 3%;
+}
+.left{
+    float: left;
+    width: 87%;
+    background-color: #FFF;
+}
+.left img{
+    margin-left: 7.2%;  
+    margin-top:-3%;
+    vertical-align:middle;/*图片竖直居中*/
+}
+
+.right img{
+    vertical-align:middle;
+}
+.left input{
+    width: 75%;
+    outline:none;
+    color: #818180;
+    border:none;
+    font-family: 微软雅黑;
+}
+.right{
+    float: right;
+    width: 10%;
+}
+
+.clear{
+    clear: both;
+}
+.left .verifCode{
+    position:absolute;
+    right:18%;
+    background-color: #fFF;
+    border: none;
+}
+#code{
+    width: 50%;
+
+}
+.finish{
+    width:100%;
+    border:0;
+    background-color: #64779f;
+    color: #fff;
+    font-family:微软雅黑;
+}
+#finish{
+    border:none;
+    background-color: #64779f;
+    }
+.clickRegiste{
+    font-family: 微软雅黑;
+}
+a{
+    color:#64779f;
+    text-decoration: none;
+}
+@media (max-width:600px){
+.register1,.consummate1{
+    font-size: 2.5rem;
+}
+.register2,.consummate2{
+    font-size: 2rem;
+}
+/*完善信息*/
+.consummate3{
+    font-size: 2.5rem;
+}
+.consummate4{
+    font-size: 1.25rem;
+}
+.left{
+    height: 4.75rem;
+    line-height: 4.75em;
+    border-right:0.25rem solid #eca701;
+    border-bottom:0.25rem solid #eca701;
+    border-left : 0.25rem solid #818180;
+    border-top: 0.25rem solid #818180;
+}
+.left img{
+    width:2.5rem;
+    height: 2.5rem;
+}
+
+.right img{
+    width:2.5rem;
+    height: 2.5rem;
+    margin-top: 1.125rem;
+}
+.left input{
+    margin-left: 0.3rem;
+    font-size: 1.6195rem;
+}
+.left .verifCode{
+    width:6.3rem;
+    height: 4.75rem;
+}
+.finish{
+    height: 5rem;
+    font-size: 2.5rem;
+}
+a{
+    font-size: 1.6195rem;
+}
+#finish{
+    padding: 0.25rem;
+    }
+}
+@media (min-width:600px){
+.register1,.consummate1{
+    font-size: 5rem;
+}
+.register2,.consummate2{
+    font-size: 4rem;
+}
+/*完善信息*/
+.consummate3{
+    font-size: 5rem;
+}
+.consummate4{
+    font-size: 3rem;
+}
+.left{
+    height: 9.5rem;
+    line-height: 9.5em;
+    border-right:0.5rem solid #eca701;
+    border-bottom:0.5rem solid #eca701;
+    border-left : 0.5rem solid #818180;
+    border-top: 0.5rem solid #818180;
+}
+.left img{
+    width:5rem;
+    height: 5rem;
+}
+
+.right img{
+    width:5rem;
+    height: 5rem;
+    margin-top: 3rem;
+}
+.left input{
+    margin-left: 0.3rem;
+    font-size: 3.239rem;
+}
+.left .verifCode{
+    width:12.6rem;
+    height: 9rem;
+}
+.finish{
+    height: 10rem;
+    font-size: 5rem;
+}
+#finish{
+    padding: 0.5rem;
+    }
+a{
+    font-size: 3.239rem;
+}
+}
+@media (min-height:1000px) and (max-height: 1200px){
+.perfect .form-group{
+    margin-bottom: 1%;
+}
+}
+@media (min-height:1200px) {
+.perfect .form-group{
+    margin-bottom: 3%;
+}
+}
