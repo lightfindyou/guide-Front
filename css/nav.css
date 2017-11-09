@@ -4,7 +4,7 @@ body {
   overflow: hidden;
    background-color: #eeeeee;
 }
-.content1{
+.content1,.content3{
   width: 100%;
   z-index: 99;
   /*height: 100%;
@@ -40,7 +40,7 @@ body {
   /*height:6.4%;*/
   background-color:#FFF;
 }
-.top1{
+.top3{
  position:fixed;     
   margin-top:4.5%;
   margin-left:3.6%;
@@ -65,7 +65,7 @@ body {
   padding-left: 13%;
   border:none;
 }
-#line{
+#lineWay{
   width:15%;
   height:67.5%;
   font-family: 微软雅黑;
@@ -87,7 +87,7 @@ body {
   border-left : 0.1em solid #818180;
   border-top: 0.1em solid #818180;
 }
-.top1{
+.top3{
 	height:2.5rem;
 }
 #place{
@@ -95,12 +95,15 @@ body {
   border-bottom:none;
   border-left : 0.0625em solid #989898;
   border-top:none;
-  font-size: 1em;
+  font-size: 1.5em;
 }
-#line{
-   font-size: 1rem;
+#lineWay{
+   font-size: 1.5rem;
 }
-
+.users,.users1{
+    width: 2.5em;
+    height:2.5em;
+}
 }
 @media (min-width:600px){
 .top{
@@ -110,7 +113,7 @@ body {
   border-left : 0.1em solid #818180;
   border-top: 0.1em solid #818180;
 }
-.top1{
+.top3{
 	height:5rem;
 }
 #place{
@@ -118,9 +121,13 @@ body {
   border-bottom:none;
   border-left : 0.0625em solid #989898;
   border-top:none;
-  font-size: 2em;
+  font-size: 3em;
 }
-#line{
-   font-size: 2em;
+#lineWay{
+   font-size: 3em;
+}
+.users,.users1{
+    width: 5em;
+    height:5em;
 }
 }

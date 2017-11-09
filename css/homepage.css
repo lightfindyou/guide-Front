@@ -54,7 +54,7 @@ body {
 #myCarousel ol li:active{
 background-color:#f6b37f;
 }
-/*.documitory{
+.documitory{
 	width: 93.33%;
 	height: 18.74%;
 	margin-left: 3.385%;
@@ -62,9 +62,9 @@ background-color:#f6b37f;
 	top:44%;
 	background-color: #FFF;
 	text-align: center;
-}*/
+}
 .personal{
-	width: 93.33%;
+	width: 44.6%;
 	height: 18.74%;
 	margin-left: 3.385%;
 	position: absolute;
@@ -73,12 +73,12 @@ background-color:#f6b37f;
 	text-align: center;
 }
 .lesson{
-	width: 93.33%;
+	width: 44.6%;
 	height: 18.74%;
-	/*margin-left: 51.67%;*/
-	margin-left: 3.385%;
+	margin-left: 51.67%;
+	/*margin-left: 3.385%;*/
 	position: absolute;
-	top:44%;
+	top:65%;
 	background-color: #FFF;
 	text-align: center;
 }
@@ -144,12 +144,12 @@ background-color:#f6b37f;
 	margin:3% auto;
 }
 .personal img,.lesson img{
-	/*width: 40%;
+	width: 40%;
 	height: 50%;
-	margin:6% auto;*/
-	width: 20%;
+	margin:6% auto;
+	/*width: 20%;
 	height: 50%;
-	margin:3% auto;
+	margin:3% auto;*/
 }
 .documitory span,.personal span,.lesson span{
 	font-size:1.3rem;
@@ -188,12 +188,12 @@ background-color:#f6b37f;
 	margin:3% auto;
 }
 .personal img,.lesson img{
-	/*width: 28%;
+	width: 28%;
 	height: 50%;
-	margin:6% auto;*/
-	width: 14%;
+	margin:6% auto;
+	/*width: 14%;
 	height: 50%;
-	margin:3% auto;
+	margin:3% auto;*/
 }
 .documitory span,.personal span,.lesson span{
 	font-size:2.3rem;
@@ -233,12 +233,12 @@ background-color:#f6b37f;
 	margin:3% auto;
 }
 .personal img,.lesson img{
-	/*width: 28%;
+	width: 28%;
 	height: 50%;
-	margin:6% auto;*/
-	width: 14%;
+	margin:6% auto;
+	/*width: 14%;
 	height: 50%;
-	margin:3% auto;
+	margin:3% auto;*/
 }
 .documitory span,.personal span,.lesson span{
 	font-size:3rem;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="utf-8"/>  
+    <title>基于浏览器的HTML5查找地理位置</title> 
+  <script>
+
+           function getLocation(){
+               var options={
+                   enableHighAccuracy:true, 
+                   maximumAge:1000
+               }
+               if(navigator.geolocation){
+                   //浏览器支持geolocation
+                   setInterval(function(){
+                      navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+                   },4000);
+                   
+               }else{
+                   //浏览器不支持geolocation
+                   alert("浏览器不支持geolocation");
+               }
+           }
+
+           //成功时
+           function onSuccess(position){
+               //返回用户位置
+               //经度
+               var longitude =position.coords.longitude;
+               //纬度
+               var latitude = position.coords.latitude;
+
+                alert(latitude+":"+longitude);
+           }
+  
+
+           //失败时
+           function onError(error){
+               switch(error.code){
+                   case 1:
+                   alert("位置服务被拒绝");
+                   getLocation();
+                   break;
+
+                   case 2:
+                   alert("暂时获取不到位置信息");
+                   break;
+
+                   case 3:
+                   alert("获取信息超时");
+                   break;
+
+                   case 4:
+                    alert("未知错误");
+                   break;
+               }
+
+           }
+
+           window.onload=getLocation;
+   </script>
+</head>
+<body>
+  
+
+   <div id="container" style="width:600px;height:600px"></div>
+</body>
+</html>

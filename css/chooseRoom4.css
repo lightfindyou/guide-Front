@@ -58,7 +58,7 @@ body {
 	left: 26.47%;
 	font-family: 微软雅黑;
 }
-.right1,.right2{
+.right1,.right2,.right3{
 	color: #2f4975;
 	position: absolute;
 	left:86%;
@@ -87,7 +87,7 @@ body {
 .center input{
 	font-size: 1.5em;
 }
-.right1,.right2{
+.right1,.right2,.right3{
 	font-size:1.25em;
 	/*line-height: 2.1875em;*/
 }
@@ -112,7 +112,7 @@ body {
 .center input{
 	font-size: 3em;
 }
-.right1,.right2{
+.right1,.right2,.right3{
 	font-size:2.5em;
 	line-height: 2.1875em;
 }

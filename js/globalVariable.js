@@ -1,7 +1,8 @@
-﻿var variable="http://46y7i4.natappfree.cc";
-//var variable="http://localhost:8080";
+﻿//var variable="http://06e875d4.ngrok.io";
+var variable="http://localhost:8080";
+//c4666ced.ngrok.io
 //var variable="39.108.180.240:8080";
-var navVariable="39.108.180.240:8383";
+var navVariable="39.108.180.240:8181";
 var timestamp=new Date().getTime();
  
 function GetRequest() {  

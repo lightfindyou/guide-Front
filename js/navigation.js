@@ -126,7 +126,7 @@ var projection_rectify = function (p, points) {
         }
 
     } catch (e) {
-        return p;
+        return null;
     }
 };
 

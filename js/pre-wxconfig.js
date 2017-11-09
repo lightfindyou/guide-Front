@@ -3,9 +3,9 @@
 var rawUrl = url.replace(location.protocol + "//" + location.hostname + "/", "");
 
 //微信后台服务器所在地址
-var wechat_backend_host = "http://39.108.180.240:8383";
+//var wechat_backend_host = "http://39.108.180.240:8181";
 
-$.get(wechat_backend_host + "/Main/GetBaseInfo", {
+$.get("http://"+navVariable + "/Main/GetBaseInfo", {
         rawUrl: rawUrl
     },
     function (baseInfo) {
@@ -23,7 +23,7 @@ $.get(wechat_backend_host + "/Main/GetBaseInfo", {
         });
 
         wx.error(function (res) {
-            //alert('微信验证失败：\n' + JSON.stringify(res));
+            alert('微信验证失败：\n' + JSON.stringify(res));
         });
 
         wx.ready(function () {

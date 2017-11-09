@@ -1,28 +1,28 @@
   //绘制导航线
-    var request = new Object();
-    request = GetRequest();
-    var TargetX=request['TargetX'];
-    var TargetY=request['TargetY'];
-    var TargetName=request['TargetName'];
-    var telephone=request['telephone'];
-    var time=request['time'];
-   // document.getElementById('place').value=TargetName;
-    TargetX1=parseFloat(TargetX);
-    TargetY1=parseFloat(TargetY);  
-    function GetRequest() {  
-      var url = location.search; //获取url中"?"符后的字串  
-      url=decodeURI(url);
-      var theRequest = new Object();   
-      if (url.indexOf("?") != -1) {   
-      var str = url.substr(1);   
-      strs = str.split("&");   
-      for(var i = 0; i < strs.length; i ++) {   
-       theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);   
-    }   
-    }   
-    return theRequest;   
-    }
-    console.log(TargetX);
+   //  var request = new Object();
+   //  request = GetRequest();
+   //  var TargetX=request['TargetX'];
+   //  var TargetY=request['TargetY'];
+   //  var TargetName=request['TargetName'];
+   //  var telephone=request['telephone'];
+   //  var time=request['time'];
+   // // document.getElementById('place').value=TargetName;
+   //  TargetX1=parseFloat(TargetX);
+   //  TargetY1=parseFloat(TargetY);  
+   //  function GetRequest() {  
+   //    var url = location.search; //获取url中"?"符后的字串  
+   //    url=decodeURI(url);
+   //    var theRequest = new Object();   
+   //    if (url.indexOf("?") != -1) {   
+   //    var str = url.substr(1);   
+   //    strs = str.split("&");   
+   //    for(var i = 0; i < strs.length; i ++) {   
+   //     theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);   
+   //  }   
+   //  }   
+   //  return theRequest;   
+   //  }
+   //  console.log(TargetX);
     $(".users1").click(function(){
         console.log(place);
        window.location.href='navigation11.html?time='+timestamp+'&telephone='+telephone;
@@ -39,6 +39,7 @@
     var p_Lat;//纬度
     var LocX;
     var LocY;
+    var angle;
     // wx.getLocation({
     //     success: function (res) {
     //         LocY = res.latitude; // 纬度
@@ -49,8 +50,8 @@
     //     }
     // });
 
-    LocX=114.552684;
-    LocY=38.015746;//仿真中心  
+    LocX=114.552673;
+    LocY=38.015750;//仿真中心  
     var temp={"LocX":"","LocY":"","TargetX":"","TargetY":""};
     temp.LocX= LocX; 
     temp.LocY= LocY;  
@@ -76,8 +77,8 @@
         var shape2 = new THREE.Shape();
         /**四条直线绘制一个矩形轮廓*/
         shape2.moveTo(0, 0);//起点
-        shape2.lineTo(0, 1.5);//第2点
-        shape2.lineTo(0.25, 1.5);
+        shape2.lineTo(0, 2);//第2点
+        shape2.lineTo(0.25, 2);
         shape2.lineTo(0.5, 0);
         shape2.lineTo(0, 0);                
          /**创建轮廓的扫描轨迹(3D样条曲线)*/
@@ -91,10 +92,9 @@
                 steps:50//扫描方向细分数
             }
         );
-        var material2=new THREE.MeshPhongMaterial({color:0x00ff00});//材质对象
+        var material2=new THREE.MeshPhongMaterial({color:0x1565c0});//材质对象
         line2=new THREE.Mesh(geometry2,material2);//网格模型对象
         scene.add(line2);//网格模型添加到场景中
-
         var update=window.setInterval(function(){
    
              //time++;
@@ -109,6 +109,7 @@
            //获取当前地理位置
             wx.getLocation({
                         success: function (res) {
+                             //alert(res.latitude+":"+res.longitude);
                              p_Lng= res.latitude; // 纬度
                              p_Lat= res.longitude; // 经度    
                              var p=convertGpsToTencent(p_Lng, p_Lat);//将gps坐标转换为腾讯地图坐标
@@ -121,18 +122,47 @@
                                     if(newPoints==null){
                                       newPoints=projection_rectify(p, points);//投影纠正
                                     }
+                                    if(newPoints==null)//ziyuan:如果无法纠正，只在图上绘制p点，绘制完后退出这个函数
+                                    {
+                                        //......绘制p点
+                                        return;
+                                    }
+                                    //ziyuan:如果可以纠正，则绘制newPoints中最后一个点
                                     console.log(newPoints);
                                     var len=newPoints.length;
                                     console.log(newPoints[len-1]);
+                                    //拐弯处偏移的角度
+                                    var k1=(newPoints[len-1].LocY-newPoints[len-2].LocY)/(newPoints[len-1].LocX-newPoints[len-2].LocX);
+                                    var k2=(newPoints[len].LocY-newPoints[len-1].LocY)/(newPoints[len].LocX-newPoints[len-1].LocX);
+                                    if(newPoints[len-1].LocX-newPoints[len-2].LocX==0){
+                                      if(newPoints[len].LocX-newPoints[len-1].LocX==0){
+                                        angle=0;
+                                      }
+                                      else{
+                                        angle=Math.atan((newPoints[len].LocY-newPoints[len-1].LocY)/(newPoints[len].LocX-newPoints[len-1].LocX));
+                                      }
+                                    }
+                                    else{
+                                      if((newPoints[len].LocX-newPoints[len-1].LocX==0)&&(newPoints[len].LocY<newPoints[len-1].LocY)){
+                                        angle=Math.PI-Math.atan((newPoints[len-1].LocY-newPoints[len-2].LocY)/(newPoints[len-1].LocX-newPoints[len-2].LocX));
+                                      }
+                                      else if((newPoints[len].LocX-newPoints[len-1].LocX==0)&&(newPoints[len].LocY>newPoints[len-1].LocY)){
+                                        angle=Math.PI+Math.atan((newPoints[len-1].LocY-newPoints[len-2].LocY)/(newPoints[len-1].LocX-newPoints[len-2].LocX));
+                                      }
+                                      else{
+                                        angle=Math.atan((k2-k1)/(1+k2*k1));
+                                      }
+                                    }
+                                    camera.rotateY(angle);
                             //绘制当前点
-                                    var geometry0 = new THREE.SphereGeometry(2,40,40);
-                                    var material0=new THREE.MeshPhongMaterial({color:0x64779f});
-                                    circle=new THREE.Mesh(geometry0,material0);//网格模型对象
-                                    circle.position.set( (newPoints[len-1].LocX*k_x+b_x), 2, (newPoints[len-1].LocY*k_y+b_y));
-                                    //circle.rotation.z=Math.PI;
-                                    scene.add(circle);//网格模型添加到场景中
+                                    // var geometry0 = new THREE.SphereGeometry(2,40,40);
+                                    // var material0=new THREE.MeshPhongMaterial({color:0x64779f});
+                                    // circle=new THREE.Mesh(geometry0,material0);//网格模型对象
+                                    // circle.position.set( (newPoints[len-1].LocX*k_x+b_x), 2, (newPoints[len-1].LocY*k_y+b_y));
+                                    // //circle.rotation.z=Math.PI;
+                                    // scene.add(circle);//网格模型添加到场景中
                                     //调整相机位置
-                                    camera.position.z=-(newPoints[0].LocY*k_y+b_y); 
+                                   // camera.position.z=-(newPoints[0].LocY*k_y+b_y); 
                             //绘制原点到当前点的已走完的路线
                                     var point1=[];
                                     var vector1;
@@ -145,8 +175,8 @@
                                     var shape1 = new THREE.Shape();
                                     /**四条直线绘制一个矩形轮廓*/
                                     shape1.moveTo(0, 0);//起点
-                                    shape1.lineTo(0, 1.5);//第2点
-                                    shape1.lineTo(0.25, 1.5);
+                                    shape1.lineTo(0, 2);//第2点
+                                    shape1.lineTo(0.25, 2);
                                     shape1.lineTo(0.5, 0);
                                     shape1.lineTo(0, 0);                
                                      /**创建轮廓的扫描轨迹(3D样条曲线)*/
@@ -176,8 +206,8 @@
                                     var shape = new THREE.Shape();
                                     /**四条直线绘制一个矩形轮廓*/
                                     shape.moveTo(0, 0);//起点
-                                    shape.lineTo(0, 1.5);//第2点
-                                    shape.lineTo(0.25, 1.5);
+                                    shape.lineTo(0, 2);//第2点
+                                    shape.lineTo(0.25, 2);
                                     shape.lineTo(0.5, 0);
                                     shape.lineTo(0, 0);                
                                      /**创建轮廓的扫描轨迹(3D样条曲线)*/
@@ -191,9 +221,12 @@
                                             steps:50//扫描方向细分数
                                         }
                                     );
-                                    var material=new THREE.MeshPhongMaterial({color:0x00ff00});//材质对象
+                                    var material=new THREE.MeshPhongMaterial({color:0x1565c0});//材质对象
                                     line=new THREE.Mesh(geometry,material);//网格模型对象
                                     scene.add(line);//网格模型添加到场景中
+
+
+
 
 
                          }
@@ -201,7 +234,7 @@
  
            
                             
-         },2000); 
+         },4000); 
 
      // $('.button').click(function(){window.clearInterval(update);});
 

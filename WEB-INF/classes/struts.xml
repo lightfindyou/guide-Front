@@ -251,5 +251,26 @@
             </result>
         </action>
         
+        <!-- 标记房间申请记录为已处理 -->
+        <action name="handleRoomAp" class="action.RoomAction" method="handleRoomAp">
+            <result type="stream">
+                <param name="type">text/html;charset= UTF-8</param>
+                <param name="hello">inputStream</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+            
+        </action>
+        
+        <!-- 房间申请记录 -->
+        <action name="roomApDetail" class="action.RoomAction" method="getRecord">
+            <result type="stream">
+                <param name="type">text/html;charset= UTF-8</param>
+                <param name="hello">inputStream</param>
+            </result>
+            <interceptor-ref name="defaultStack" />
+            
+        </action>
+        
+        
     </package>
 </struts>
