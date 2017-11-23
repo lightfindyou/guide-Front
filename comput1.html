@@ -33,7 +33,7 @@
                 <img src="images/verify.png" border="0" class="verifyimg" />
                 <div class="clearfix"></div> -->
                     <li class="login-sub" x>
-                        <input style="text-align: center; cursor: pointer;" class="tologin"  type="buttom" name="Submit" value="登录" />
+                        <input style="text-align: center; cursor: pointer;" class="tologin" type="button" name="Submit" value="登录" />
                         <input style="text-align: center;" name="Reset" type="reset" value="重置" />
                     </li>
                 </form>
@@ -81,477 +81,45 @@
             </div>
             <!--右侧-->
             <div class="right">
-                <div class="learnerright">
-                    <div class="searchdiv">
-                        <div class="search" >
-                            <input type="text" class="searchput" placeholder="检索学员手机号" onfocus="this.placeholder=''" onblur="this.placeholder='检索学员手机号'">
-                            <button type="button" class="searchbt"><img src="image1/search.png"></button>
-                        </div>
-                        <div class="courseaord" style="display: none;">
-                                <input type="text" class="caodput" placeholder="添加/删除学员手机号" onfocus="this.placeholder=''" onblur="this.placeholder='添加/删除学员手机号'">
-                                <div class="caoda"><p>添加</p></div>
-                                <div class="caodd"><p>删除</p></div>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="classyear">
-                            <div class="year01 class0" id="yearhover">
-                                <p>全部学员</p>
-                            </div>
-                            <div class="year01 Classes">
-                                <p>选择课程</p>
-                                <div id="choiceClass">
-                                    <div style="background-color: white;height:14%"><img style="height: 100%;width: auto;margin:0 auto;display: block;" src="image1/sanjiao.png"></div>
-                                </div>
-                            </div>
-                            <!--<div class="year01 class0">
-                                <p>添加学员</p>
-                            </div>-->
-                        </div>
-                    </div>
-                    <div class="learnerscontainer">
-                        <div class="learners">
-                        </div>
-                        <div class="addlearner">
-                            <img class="addlearnerimg" src="image1/tianjia.png">
-                            <div style="display: none" class="aordlearner"><p>增删学员</p></div>
-                            <div style="display: none" class="backtodetial"><p>确认添加/删除</p></div>
-                            <div style="display: none" class="backtodetial"><p>学员详细信息</p></div>
-                        </div>
-                    </div>
-                    <div class="Addlearnercontainer">
-                        <div class="Addlearnerinfo">
-                            <form>
-                                <p>姓名
-                                    <input type="text" class="Addlearnerinput" />
-                                </p>
-                                <p>性别
-                                    <input type="text" class="Addlearnerinput" />
-                                </p>
-                                <p>身份证号
-                                    <input type="text" class="Addlearnerinput" />
-                                </p>
-                                <p>电子邮箱
-                                    <input type="text" class="Addlearnerinput" />
-                                </p>
-                                <p>手机号
-                                    <input type="text" class="Addlearnerinput" />
-                                </p>
-                                <!--<p>班级
-                                    <input type="text" class="Addlearnerinput" />
-                                </p>-->
-                                <p id="Addlearnersubmitp">
-                                    <input value="学员添加入库" class="Addlearnersubmit">
-                                </p>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="detailed">
-                        <div class="detailedleft">
-                            <img />
-                        </div>
-                        <div class="detailedright">
-                            <div class="detaileddiv">
-                                <p class="detailedpleft">姓名</p>
-                                <p class="detailedpright"></p>
-                            </div>
-                            <div class="detaileddiv">
-                                <p class="detailedpleft">性别</p>
-                                <p class="detailedpright"></p>
-                            </div>
-                            <div class="detaileddiv">
-                                <p class="detailedpleft">身份证号</p>
-                                <p class="detailedpright"></p>
-                            </div>
-                            <div class="detaileddiv">
-                                <p class="detailedpleft">电子邮箱</p>
-                                <p class="detailedpright"></p>
-                            </div>
-                            <div class="detaileddiv">
-                                <p class="detailedpleft">手机号</p>
-                                <p class="detailedpright"></p>
-                            </div>
-                            <!--<div class="detaileddiv">
-                                <p class="detailedpleft">班级</p>
-                                <p class="detailedpright"></p>
-                            </div>-->
-                        </div>
-                    </div>
-                    <!--<div class="addClass">
-                        <div class="addClassCt">
-                            <p class="addClassCtp">请输入班级名称
-                                <input type="text" class="addClassinput" />
-                            </p>
-                            <p id="AddClassSubmit">
-                                <input value="添加" class="AddClassSubmit">
-                            </p>
-                        </div>
-                    </div>-->
-                </div>
-                <div class="boarderright">
-                    <div class="searchfloor">
-                        <div class="searchfloorcontainer">
-                            <div class="dormitory">
-                                <p class="floorp">学生公寓A座</p>
-                                <div id="choiceAB">
-                                    <div style="background-color: white;height:20%"><img style="height: 100%;width: auto;margin:0 auto;display: block;" src="image1/sanjiao.png"></div>
-                                    <div class="everychoice">
-                                        <p>学生公寓A</p>
-                                    </div>
-                                    <div class="everychoice">
-                                        <p>学生公寓B</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="floors">
-                                <p class="floorp">第一层</p>
-                                <div id="choicefloor">
-                                    <div style="background-color: white;height:5%"><img style="height: 100%;width: auto;margin:0 auto;display: block;" src="image1/sanjiao.png"></div>
-                                    <div class="everychoice">
-                                        <p>一</p>
-                                    </div>
-                                    <div class="everychoice">
-                                        <p>二</p>
-                                    </div>
-                                    <div class="everychoice">
-                                        <p>三</p>
-                                    </div>
-                                    <div class="everychoice">
-                                        <p>四</p>
-                                    </div>
-                                    <div class="everychoice">
-                                        <p>五</p>
-                                    </div>
-                                    <div class="everychoice">
-                                        <p>六</p>
-                                    </div>
-                                    <div class="everychoice">
-                                        <p>七</p>
-                                    </div>
-                                    <div class="everychoice">
-                                        <p>七</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="boarders">
-                        <div class="Dormitorys">
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">111</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">110</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">109</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">108</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">107</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">106</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">105</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">104</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">103</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">102</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">101</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">112</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">113</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">114</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">115</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">116</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">117</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">118</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">119</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">120</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">121</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv">
-                                    <p class="everydormitoryp">122</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="choiceornot">
-                            <div class="everydormitory">
-                                <div class="everydormitorycolor" style="background-color: black"></div>
-                                <div class="everydormitorydiv" style="width: 100%">
-                                    <p class="everydormitoryp" style="font-size: 10px;">已选择</p>
-                                </div>
-                            </div>
-                            <div class="everydormitory" style='float: right;'>
-                                <div class="everydormitorycolor"></div>
-                                <div class="everydormitorydiv" style="width: 100%">
-                                    <p class="everydormitoryp" style="font-size: 10px;">未选择</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="inforight">
-                    <div class="searchdiv">
-                        <div class="search">
-                            <input type="text" class="searchput" placeholder="检索课程" onfocus="this.placeholder=''" onblur="this.placeholder='检索课程'">
-                            <button type="button" class="searchbt"><img src="image1/search.png"></button>
-                        </div>
-                    </div>
-                    <div class="classcontainer">
-                        <div class="titlecontainer">
-                            <div class="titles">
-                                <img src="image1/liebiao.png">
-                                <p>课程名称</p>
-                            </div>
-                            <div class="titles">
-                                <img src="image1/renxiang.png">
-                                <p>教师姓名</p>
-                            </div>
-                            <div class="titles">
-                                <img src="image1/zhongbiao.png">
-                                <p>上课节次</p>
-                            </div>
-                            <div class="titles">
-                                <img src="image1/dingwei.png">
-                                <p>上课地点</p>
-                            </div>
-                            <div class="titles">
-                                <img src="image1/renxiang.png">
-                                <p>课程ID</p>
-                            </div>
-                        </div>
-                        <div class="classes">
-                            <div class="everyclass">
-                                <div>
-                                    <p>计算机基础</p>
-                                </div>
-                                <div>
-                                    <p>易建联</p>
-                                </div>
-                                <div>
-                                    <p>17-9-30 15:00-17:00</p>
-                                </div>
-                                <div>
-                                    <p>培训公寓A座-102</p>
-                                </div>
-                                <div>
-                                    <p>培训公寓A座-102</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="becareful">
-                        <p>双击属性可以修改，修改完成后点击“修改完成”，上课节次格式：第X周第X节</p>
-                    </div>
-                    <div class="aboutcourse">
-                        <div class="overchange">
-                            <p>修改完成</p>
-                        </div>
-                        <div class="addcourse">
-                            <p>添加课程</p>
-                        </div>
-                        <div class="overAdd">
-                            <p>添加完成</p>
-                        </div>
-                        <div class="noAdd">
-                            <p>取消添加</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sendright">
-                    <div class="edit">
-                        <div class="edittext">
-                            <p>编辑内容(发送给全部学员或者选择课程发送)</p>
-                        </div>
-                        <div class="textclasses">
-                            <div class="textclass" id="yearhover1">
-                                <p>全部学员</p>
-                            </div>
-                            <div class="textclass Classes1">
-                                <p>选择课程</p>
-                                <div id="choiceClass1">
-                                    <div style="background-color: white;height:14%"><img style="height: 100%;width: auto;margin:0 auto;display: block;" src="image1/sanjiao.png"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="editinput">
-                        <textarea></textarea>
-                    </div>
-                    <!--<div class="messageClass">
-                        <div class="messageClassdiv">
-                            <p class="messageClassp">请选择要发送信息的班级</p>
-                        </div>
-                        <div class="theClass">
-                            <div class="class1" id="yearhover1">
-                                <p class="theClassp">全体学员</p>
-                            </div>
-                        </div>
-                    </div>-->
-                    <div class="sendcontainer">
-                        <div class="tosend">
-                            <p>发送</p>
-                        </div>
-                        <div class="tosend">
-                            <p>定时发送</p>
-                        </div>
-                    </div>
-                    < </div>
-                        <div class="sendedright">
-                            <div class="edittime">
-                                <p><span>2017</span>-<span>9</span>-<span>30</span>&nbsp;&nbsp;&nbsp;<span></span>:<span></span></p>
-                            </div>
-                            <div class="editinputed">
-                                <textarea readonly></textarea>
-                            </div>
-                            <div class="edittime">
-                                <p><span>2017</span>-<span>9</span>-<span>30</span>&nbsp;&nbsp;&nbsp;<span></span>:<span></span></p>
-                            </div>
-                            <div class="editinputed">
-                                <textarea readonly></textarea>
-                            </div>
-                            <div class="more">
-                                <div class="morem">
-                                    <p>更多信息</p>
-                                </div>
-                            </div>
-                        </div>
-                </div>
+                <iframe id="iframe0" style="width: 100%;height: 100%;background-color: white;"></iframe>
             </div>
         </div>
-        <!--遮罩-->
-        <div class="tohide">
-        </div>
-        <!--定时发送-->
-        <div class="settime">
-            <div class="stcontainer">
-                <div class="dsfs">
-                    <p>定时发送</p>
-                </div>
-                <div class="choicetime">
-                    <p>请选择定时发送的日期和时间</p>
-                </div>
-                <div class="timechoice">
-                    <div id="calend1" class="calend">选择日期</div>
-                    <div class="specifictime">
-                        <input type="text" value="12">
-                        <div class="colon">
-                            <p>:</p>
-                        </div>
-                        <input type="text" value="30">
+    </div>
+    <div class="tohide">
+    </div>
+    <!--定时发送-->
+    <div class="settime">
+        <div class="stcontainer">
+            <div class="dsfs">
+                <p>定时发送</p>
+            </div>
+            <div class="choicetime">
+                <p>请选择定时发送的日期和时间</p>
+            </div>
+            <div class="timechoice">
+                <div id="calend1" class="calend">选择日期</div>
+                <div class="specifictime">
+                    <input type="text" value="12">
+                    <div class="colon">
+                        <p>:</p>
                     </div>
+                    <input type="text" value="30">
                 </div>
-                <div class="stbuttom">
-                    <div class="stsend1">
-                        <div id="stsenddiv">
-                            <p id="stsendp">发送</p>
-                        </div>
+            </div>
+            <div class="stbuttom">
+                <div class="stsend1">
+                    <div id="stsenddiv">
+                        <p id="stsendp">发送</p>
                     </div>
                 </div>
             </div>
         </div>
-        </script>
-        <script src="js1/jquery-3.2.1 (1).js"></script>
-        <script src="js1/jquery.mockjax.min.js"></script>
-        <script type="text/javascript" src="js1/login.js"></script>
-        
-        <script src="js1/Untitled-3.js"></script>
+    </div>
+    <script src="js1/jquery-3.2.1 (1).js"></script>
+    <script type="text/javascript" src="js1/jquery.mockjax.min.js"></script>
+    <script type="text/javascript" src="js1/login.js"></script>
+    <script src="js1/jquery.nicescroll.min.js"></script>
+    <script src="js1/Untitled-3.js"></script>
 </body>
 
 </html>

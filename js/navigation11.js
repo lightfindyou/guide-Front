@@ -161,11 +161,11 @@ function RegisterEvent() {
              });
               hammertime.on("panleft", function (ev) {
                 //alert("向左滑动");
-                camera.position.x += 2;
+                camera.position.x += 1;
              });
              hammertime.on("panright", function (ev) {
                 //alert("向右滑动");
-                camera.position.x -= 2;
+                camera.position.x -= 1;
              });
              if( camera.position.y >10){
                 hammertime.get('pinch').set({
@@ -205,102 +205,7 @@ function RegisterEvent() {
                 // DegreeTick += 0.002;
              });
 
-              var multi_touch_mode = false;
-              var touchA;
-              var touchB;
-              var multi_touch_distance = 0;
-              window.ontouchstart = function (ev) {
-                  if (ev.touches.length > 1) {
-                      multi_touch_mode = true;
-                      touchA = ev.touches[0];
-                      touchB = ev.touches[1];
-                      multi_touch_distance = Math.sqrt(Math.pow((touchA.clientX - touchB.clientX), 2) +
-                          Math.pow((touchA.clientY - touchB.clientY), 2));
-                  }
-                  else
-                      multi_touch_mode = false;
-              };
-              var lastsidetouchX = window.innerWidth / 2;
-              var lastsidetouchY = window.innerHeight / 2;
-              var lastmoveX = window.innerWidth / 2;
-              var lastmoveY = window.innerHeight / 2;
-              var lasttouchX = window.innerWidth / 2;
-              var lasttouchY = window.innerHeight / 2;
-              var xangle = 3.14 / lastmoveX;
-              var yangle = 3.14 / lastmoveY;
-              var move = function (mev, tev) {
-                  if (mev !== void 0) {
-                      if (mev.clientX > lastmoveX) {
-                          camera.rotateY(xangle);
-                      }
-                      else if (mev.clientX < lastmoveX) {
-                          camera.rotateY(-xangle);
-                      }
-                      lastmoveX = mev.clientX;
-                  }
-                  //else if (tev !== void 0) {
-                  //     if (tev.touches[0].clientX >= window.innerWidth - 48) {
-                  //         if (tev.touches[0].clientY - lastsidetouchY > 0) {
-                  //             camera.position.y += 5;
-                  //             ////
-                  //             if (camera.position.y >= 200)
-                  //                 camera.position.y = 200;
-                  //             lastsidetouchY = tev.touches[0].clientY;
-                  //         }
-                  //         else if (tev.touches[0].clientY - lastsidetouchY < 0) {
-                  //             camera.position.y -= 5;
-                  //             ////
-                  //             if (camera.position.y <= 0)
-                  //                 camera.position.y = 0;
-                  //             lastsidetouchY = tev.touches[0].clientY;
-                  //         }
-                  //         return;
-                  //     }
-                  //     else if (tev.touches[0].clientY >= window.innerHeight - 48) {
-                  //         if (tev.touches[0].clientX - lastsidetouchX > 0) {
-                  //             camera.position.x += 5;
-                  //             ////
-                  //             lastsidetouchX = tev.touches[0].clientX;
-                  //             if (camera.position.x >= 200)
-                  //                 camera.position.x = 200;
-                  //         }
-                  //         else if (tev.touches[0].clientX - lastsidetouchX < 0) {
-                  //             camera.position.x -= 5;
-                  //             ////
-                  //             lastsidetouchX = tev.touches[0].clientX;
-                  //             if (camera.position.x <= -200)
-                  //                 camera.position.x = -200;
-                  //         }
-                  //         return;
-                  //     }
-                  //     if (tev.touches[0].clientX > lasttouchX) {
-                  //         camera.rotation.y += 0.02;
-                  //         ////左右
-                  //     }
-                  //     else if (tev.touches[0].clientX < lasttouchX) {
-                  //         camera.rotation.y -= 0.02;
-                  //         ////
-                  //     }
-                  //     lasttouchX = tev.touches[0].clientX;
-                  // }
-                  // else
-                  //     return false;
-             };
-              window.onmousemove = function (ev) {
-                  ev.preventDefault();
-                  move(ev, void 0);
-              };
-              window.ontouchend = function (ev) {
-                  multi_touch_distance = 0;
-                  multi_touch_mode = false;
-              };
-              window.ontouchmove = function (ev) {
-                  ev.preventDefault();
-                  if (ev.touches.length === 1) {
-                      multi_touch_mode = false;
-                      move(void 0, ev);
-                  } 
-              };
+              
 
     // end
     document.addEventListener("keydown", function (ev) {

@@ -1,5 +1,14 @@
-    $(".content1").hide();
+﻿    $(".content1").hide();
     $(".content").show();
+    var height=$(window).height();
+    console.log(height);
+    $(".content").css({"height":height,"backgroundColor":"#eeeeee"});
+    $(".check").click(function(){
+      $(this).css({"backgroundColor":"#eeeeee"});
+    })
+    $(".check").on("click",function(){
+  $(this).addClass("on").siblings().removeClass("on");
+})
    // var telephone=location.hash.substring(1);
      var request = new Object();
     request = GetRequest();
@@ -17,29 +26,53 @@
     })
 
     $(".documitory").click(function(){
-    	telephone=$(this).find('span').attr("id");
-        var data="phoneNumber="+telephone+"";
-        console.log(data);
-        $.post(""+variable+"/guide/myDorm.action",data,
+    	telephone=$(this).find('span').attr("id"); 
+        var data="phoneNumber="+telephone+""; 
+      var data="phoneNumber="+telephone+"";    
+     $.post(""+variable+"/guide/getPersionalInfo.action",data,
         function(dataBack){
-        	console.log(dataBack);
-           var data=JSON.parse(dataBack);
-           console.log(data.handle);     
-          if(data.handle==0){
-            window.location.href='time.html?time='+timestamp+'&telephone='+telephone;                   
+            dataBack=JSON.parse(dataBack);
+            console.log(dataBack.IDNumber);
+            if(dataBack.IDNumber=="NIL"){
+              var message=confirm("请先完善个人信息");
+              if(message==true){
+                window.location.href='consummate.html?time='+timestamp+'&telephone='+telephone;                
+              }             
             }
-           else
-            window.location.href='chooseRoom5.html?time='+timestamp+'&telephone='+telephone+'&dataBack='+dataBack;
+            else{
+             // var data="phoneNumber="+telephone+"";
+              console.log(data);
+              $.post(""+variable+"/guide/myDorm.action",data,
+              function(dataBack){
+                console.log(dataBack);
+                var data=JSON.parse(dataBack);
+                console.log(data.handle);     
+                if(data.noApplyRecord==1){
+                  window.location.href='time.html?time='+timestamp+'&telephone='+telephone;                   
+                  }
+                 else{
+                  if(data.handle==0){
+                    var roomType=data.roomType;
+                    var time=data.checkInDate;
+                    var outTime=data.checkOutDate;
+                    var applyDate=data.applyDate;
+                    var Male=data.male;
+                    var Female=data.female;
+                    //var roomType=request['roomType'];
+                    window.location.href='chooseRoom4.html?roomType=' +encodeURI(roomType)+ '&time=' + time+ '&applyDate=' + applyDate+'&timestamp='+timestamp+'&telephone='+telephone+'&Male='+Male+'&Female='+Female+'&outTime='+outTime;   
+                  }
+                  else{
+                    urlByjxz='chooseRoom5.html?time='+timestamp+'&telephone='+telephone+'&dataBack='+dataBack;
+                    transformedUrl=encodeURI(urlByjxz);
+                    window.location.href=transformedUrl;
+                  }
+                   
+                 }
+                 // window.location.href='chooseRoom5.html?time='+timestamp+'&telephone='+telephone+'&dataBack='+dataBack;
+              })
+            }
+           
         })
-      // $.get("http://"+variable+"/guide/myDorm.action",
-      // function(dataBack){
-      //   console.log(dataBack);     
-      //     if(dataBack=="none"){
-      //       window.location.href="time.html";                   
-      //       }
-      //      else
-      //       window.location.href="chooseRoom5.html#"+dataBack;                         
-      // })     
     })
     $(".personal").click(function(){
     	telephone=$(this).find('span').attr("id");

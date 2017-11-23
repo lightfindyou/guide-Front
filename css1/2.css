@@ -14,7 +14,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Microsoft yahei";
+    font-family: "Arial","黑体","宋体",sans-serif;
 }
 
 html,
@@ -174,9 +174,9 @@ body {
 /*学员信息*/
 
 .learnerright {
-    display: none;
     width: 100%;
     height: 100%;
+        background-color: white;
 }
 
 .searchdiv {
@@ -488,7 +488,6 @@ body {
     height: 100%;
     width: auto;
 }
-
 .aordlearner {
     height: 70%;
     width: 12%;
@@ -691,13 +690,124 @@ body {
 /*住宿情况*/
 
 .boarderright {
-    display: none;
-    font-size: 14px;
+    display: block;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    color: black;
+    -moz-box-sizing: border-box;  /*Firefox3.5+*/
+    -webkit-box-sizing: border-box; /*Safari3.2+*/
+    -o-box-sizing: border-box; /*Opera9.6*/
+    -ms-box-sizing: border-box; /*IE8*/
+    box-sizing: border-box; /*W3C标准(IE9+，Safari5.1+,Chrome10.0+,Opera10.6+都符合box-sizing的w3c标准语法)*/
+    background-color: white;
+}
+.reserveroom{
     width: 100%;
     height: 100%;
 }
+.roomtitle{
+    background-color: rgb(184, 194, 228);
+    height: 10%;
+    width: 100%;
+}
+.theroomtitle
+{
+    margin-left: 5%;
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: table;
+}
 
-.searchfloor {
+.theroomtitle p
+{
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.roomcontainer{
+    font-size: 14px;
+    height: 90%;
+    width: 100%;
+}
+.roomtable
+{
+    height: 10%;
+    width: 100%;
+}
+.roomtr
+{
+    width: 100%;
+    height: 100%;
+}
+.shortroomtd
+{
+    height: 100%;
+    float: left;
+    width: 4%;
+    display: table;
+}
+.shortroomtd p
+{
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.longrromtd{
+    height: 100%;
+    float: left;
+    width: 16%;
+    display: table;
+}
+.longrromtd p
+{
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.roomtable1
+{
+    height: 90%;
+    width: 100%;
+    overflow-y: auto;
+}
+.roomtr1
+{
+    width: 100%;
+    height: 10%;
+}
+.shortroomtd1
+{
+    height: 100%;
+    float: left;
+    width: 4%;
+    display: table;
+}
+.shortroomtd1 p
+{
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.longrromtd1{
+    height: 100%;
+    float: left;
+    width: 16%;
+    display: table;
+}
+.longrromtd1 p
+{
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.roomtr1:hover
+{
+    background-color: rgb(184, 194, 228);
+}
+/*.searchfloor {
     height: 15%;
     width: 100%;
 }
@@ -782,7 +892,7 @@ body {
     text-align: center;
     display: table-cell;
     vertical-align: middle;
-}
+}*/
 
 
 
@@ -853,9 +963,9 @@ body {
 /*课程管理*/
 
 .inforight {
-    display: none;
     width: 100%;
     height: 100%;
+        background-color: white;
 }
 
 
@@ -1037,9 +1147,9 @@ body {
 /*编辑信息*/
 
 .sendright {
-    display: none;
     width: 100%;
     height: 100%;
+        background-color: white;
 }
 
 .edit {
@@ -1209,7 +1319,7 @@ body {
 /*已发信息*/
 
 .sendedright {
-    display: none;
+    background-color: white;
     width: 100%;
     height: 100%;
     overflow-y: auto;

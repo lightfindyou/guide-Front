@@ -6,7 +6,7 @@
         var time=request['time']; 
         var data="phoneNumber="+telephone+"";
         console.log(data);
-        $.post("/guide/getPersionalInfo.action",data,
+        $.post(""+variable+"/guide/getPersionalInfo.action",data,
         function(dataBack){
             dataBack=JSON.parse(dataBack);
             console.log(dataBack.IDNumber);

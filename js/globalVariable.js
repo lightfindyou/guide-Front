@@ -1,10 +1,9 @@
-﻿//var variable="http://06e875d4.ngrok.io";
-var variable="http://localhost:8080";
-//c4666ced.ngrok.io
+﻿var variable="/";
+//var variable="http://localhost:8080";
 //var variable="39.108.180.240:8080";
 var navVariable="39.108.180.240:8181";
 var timestamp=new Date().getTime();
- 
+
 function GetRequest() {  
   var url = location.search; //获取url中"?"符后的字串  
   url=decodeURI(url);

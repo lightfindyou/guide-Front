@@ -7,10 +7,10 @@ body {
 .content {
     width: 100%;
     height: 100%;
-    top:0;
+   /* top:0;
     z-index: -1;
     position: absolute;
-    background-color:#eeeeee;
+    background-color:#eeeeee;*/
 }
 .background{
 	width: 100%;
@@ -20,100 +20,158 @@ body {
 	width: 100%;
 	height: 3.75%;
 	color:#64779f;
-	position: absolute;
+	/*position: absolute;*/
 	/*top:4.5%;*/
-	top: 4.5%;
+	margin-top: 0%;
 }
 .top span{
 	font-family: 微软雅黑;
-	position: absolute;
-	left:14.67%;
+	/*position: absolute;*/
+	margin-left:3.67%;
 }
 .top img{
-	position: absolute;
-	top:15%;
-	left:6.7%;
+	/*position: absolute;*/
+	margin-top:10%;
+	margin-left:6.7%;
 	display: inline;
 }
 .sex{
-	width: 100%;
+	width: 85.33%;
 	height: 8.75%;
 	color:#64779f;
-	position: absolute;
-	top:15.5%;
-	left:14.67%;
+	position: relative;
+	margin-top:17.5%;
+	margin-left:14.67%;
 	color: #64779f;
 	font-family: 微软雅黑;
 } 
+.check{
+	/*width: 0.6rem;
+	height:0.5rem;
+	background: #64779f;
+	border:none;	
+	border-radius: 0.5rem;*/
+}
 .label1{
-	margin-left: 24%;
+	margin-left: 26%;
 }
 .label2{
-	margin-left: 24%;
+	margin-left: 26%;
 }
-#number1,#number2{
+#number1,#number2,#number3,#number4{
 	width: 16%;	
 	background-color: rgba(218,218,218,0.6);
 	border: none;
-	margin-left: 11%;	
+	margin-left: 21%;	
+	text-align: center;
+	color: #64779f;
+	font-family: 微软雅黑;
+}
+#number3,#number4{
+	width: 19%;	
+	margin-left: 19%;
 }
 .person{
 	margin-left: 4%;
 }
+.hotel{
+	width: 85.33%;
+	min-height: 33.75%;
+	color:#64779f;
+	position: relative;
+	margin-top:10.5%;
+	margin-left:14.67%;	
+}
 .roomType{
-	width: 100%;
+	width: 85.33%;
 	height: 8.75%;
 	color:#64779f;
-	position: absolute;
-	top:30.5%;
-	left:14.67%;
+	/*position: absolute;
+	top:0%;
+	left:0%;*/
 	color: #64779f;
 	font-family: 微软雅黑;
 }
 .doubleRoom{
-	position: absolute;
-	top:36.5%;
-	left: 30.67%;
+	/*position: absolute;*/
+	/*margin-top:0%;
+	margin-left: 16.67%;*/
+	/*margin-top:-1%;
+	margin-left: 45.67%;*/
+	margin-top:2%;
+	margin-left: 16.67%;
 	background-color:rgba(218,218,218,0.4);
 	text-align: center;
 	vertical-align: middle;
 }
 .room1{
-	position: absolute;
-	top:36.5%;
-	left: 57.67%;
+	/*position: absolute;*/
+/*	margin-top:-18%;
+	margin-left: 41.67%;*/
+	margin-top:-21%;
+	margin-left: 16.67%;
 	/*background-color:rgba(218,218,218,0.4);*/
 	text-align: center;
 }
-
+.room11{
+	/*position: absolute;*/
+/*	margin-top:-18%;
+	margin-left: 41.67%;*/
+/*	margin-top:-14%;
+	margin-left: 53.67%;*/
+	margin-top:-16%;
+	margin-left: 14.67%;
+	/*background-color:rgba(218,218,218,0.4);*/
+	text-align: center;
+}
 .quadRoom{
-	position: absolute;
-	top:51.5%;
-	left: 30.67%;
+	/*position: absolute;*/
+	/*margin-top:8%;
+	margin-left: 16.67%;*/
+	margin-top:13%;
+	margin-left: 16.67%;
 	background-color:rgba(218,218,218,0.4);
 	text-align: center;
 }
 .room2{
-	position: absolute;
-	top:51.5%;
-	left: 57.67%;
+	/*position: absolute;*/
+	/*margin-top:-18%;
+	margin-left: 41.67%;*/
+	margin-top:-16%;
+	margin-left: 14.67%;
 	/*background-color:rgba(218,218,218,0.4);*/
 	text-align: center;
 }
-.room1 span,.room2 span{
+.room22{
+	/*position: absolute;*/
+	/*margin-top:-18%;
+	margin-left: 41.67%;*/
+	margin-top:-16%;
+	margin-left: 16.67%;
+	/*background-color:rgba(218,218,218,0.4);*/
+	text-align: center;
+}
+.room1 span,.room2 span,.room11 span,.room22 span{
 	font-family: 微软雅黑;
 	color: #64779f;
 }
 /*.quadRoom{
 	left: 60%;
 }*/
+/*#finish{
+	width: 73%;
+    height: 8%;
+    position: relative;
+     margin-left: 13%;
+    margin-top:68%;
+}*/
 .next{
     width: 73%;
-    height: 8%;
+   /* height: 8%;*/
+    margin-left: 13%;
+    margin-top:10%;
     background-color: #64779f;
-    position: absolute;
-    left: 13%;
-    top:68%;
+  
     color: #fff;
     border:none;
     font-family: 微软雅黑;
@@ -142,8 +200,9 @@ body {
 .room1,.room2{
 	line-height: 7.5rem;
 }
-.room1 span,.room2 span{
+.room1 span,.room2 span,.room11 span,.room22 span{
 	font-size: 1.8rem;
+	margin-top: -21%;
 }
 .sex1,.roomType{
 	font-size: 2rem;
@@ -151,9 +210,12 @@ body {
 .sex label{
 	font-size: 1.8rem;
 }
-
+.check{
+	font-size: 1rem;
+}
 .next{
     font-size: 2rem;
+    height:4.5rem;
 }
 }
 /*
@@ -182,7 +244,7 @@ iPhone 5
 .room1,.room2{
 	line-height: 6.5rem;
 }
-.room1 span,.room2 span{
+.room1 span,.room2 span,.room11 span,.room22 span{
 	font-size: 1.5rem;
 }
 .sex1,.roomType{
@@ -191,14 +253,21 @@ iPhone 5
 .sex label{
 	font-size: 1.5rem;
 }
+.check{
+	font-size: 1rem;
+}
 .next{
     font-size: 2rem;
+    height:4.5rem;
 }
 }
 /*
 ipad
  */
 @media (min-width: 700px) and (min-height: 1000px){
+.top{
+	padding-top:4.5%;
+}
 .top span{
 	font-size: 4em;
 }
@@ -206,6 +275,12 @@ ipad
 	width: 4em;
 	height: 4em;
 	margin-top: 0.25rem;
+}
+.check{
+	margin-right: 2%;
+}
+#number1,#number2,#number3,#number4{
+	height:3rem;
 }
 .doubleRoom img,.quadRoom img{
 	width: 4em;
@@ -219,7 +294,7 @@ ipad
 .room1,.room2{
 	line-height: 12rem;
 }
-.room1 span,.room2 span{
+.room1 span,.room2 span,.room11 span,.room22 span{
 	font-size: 3rem;
 }
 .sex1,.roomType{
@@ -230,12 +305,16 @@ ipad
 }
 .next{
     font-size: 4rem;
+     height:8rem;
 }
 }
 /*
 ipad Pro
  */
 @media (min-width: 700px) and (min-height: 1200px){
+.top{
+	padding-top:4.5%;
+}
 .top span{
 	font-size: 6.6em;
 }
@@ -243,6 +322,12 @@ ipad Pro
 	width: 5.4em;
 	height: 5.4em;
 	margin-top:1.25em;
+}
+.check{
+	margin-right: 2%;
+}
+#number1,#number2,#number3,#number4{
+	height:5rem;
 }
 .doubleRoom img,.quadRoom img{
 	width: 5.4em;
@@ -256,7 +341,7 @@ ipad Pro
 .room1,.room2{
 	line-height: 16rem;
 }
-.room1 span,.room2 span{
+.room1 span,.room2 span,.room11 span,.room22 span{
 	font-size: 5rem;
 }
 .sex1,.roomType{
@@ -267,6 +352,7 @@ ipad Pro
 }
 .next{
     font-size: 6.6rem;
+    height:10rem;
 }
 }
 

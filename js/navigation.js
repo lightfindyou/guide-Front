@@ -126,7 +126,7 @@ var projection_rectify = function (p, points) {
         }
 
     } catch (e) {
-        return null;
+        return p;
     }
 };
 
@@ -140,13 +140,13 @@ var projection_rectify = function (p, points) {
 */
 var convert = function (p_Lng, p_Lat) {
     var outOfChina = function (lat, lon) {
-    if (lon < 72.004 || lon > 137.8347) {
-        return true;
-    }
-    if (lat < 0.8293 || lat > 55.8271) {
-        return true;
-    }
-    return false;
+        if (lon < 72.004 || lon > 137.8347) {
+            return true;
+        }
+        if (lat < 0.8293 || lat > 55.8271) {
+            return true;
+        }
+        return false;
     }
 
     var pi = 3.1415926535897931;
@@ -180,5 +180,5 @@ var convert = function (p_Lng, p_Lat) {
     var sqrtMagic = Math.sqrt(magic);
     dLat = (dLat * 180.0) / ((a * (1 - ee)) / (magic * sqrtMagic) * pi);
     dLon = (dLon * 180.0) / (a / sqrtMagic * Math.cos(radLat) * pi);
-    return new Point(wgLon + dLon, wgLat + dLat);
+    return new Point(parseFloat(wgLon) + dLon, parseFloat(wgLat) + dLat);
 }

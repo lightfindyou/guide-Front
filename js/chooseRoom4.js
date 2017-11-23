@@ -32,3 +32,6 @@
      $(".return").click(function(){
       window.location.href='chooseRoom1.html?timestamp='+timestamp+'&telephone='+telephone+'&time='+time+'&outTime='+outTime;
     })
+      $("#finish").click(function(){
+          window.location.href='homepage.html?time='+timestamp+'&telephone='+telephone;
+        })

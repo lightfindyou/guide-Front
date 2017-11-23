@@ -139,12 +139,13 @@ var projection_rectify = function (p, points) {
 
             return viaPoints;
         } else {
-            return null;
+            return null;         
         }
 
     } catch (e) {
         console.log(e);
         return null;
+        
     }
 };
 
